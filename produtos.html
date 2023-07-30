@@ -1,36 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
-<head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="styles.css">
-        <title>Produtos</title>
-        </head>
+      <h:head>
+          <title>Produtos</title>
+          </h:head>
 
-        <body>
-          <header>
-              <nav>
-                    <ul>
-                            <li><a href="index.html" class="fade-out-link">Voltar</a></li>
-                                    <!-- Adicione mais links para outras páginas aqui -->
-                                          </ul>
-                                              </nav>
-                                                </header>
+          <h:body>
+              <!-- Conteúdo da página de produtos aqui -->
+                  <h2>Produtos</h2>
+                      <h:form>
+                              <h:commandLink value="Voltar" action="index.xhtml" styleClass="fade-out-link">
+                                          <f:param name="fade" value="out" />
+                                                  </h:commandLink>
+                                                      </h:form>
+                                                      </h:body>
 
-                                                  <main>
-                                                      <!-- Conteúdo da página de produtos -->
-                                                          <h1>Produtos Disponíveis</h1>
-                                                              <ul>
-                                                                    <li>Produto 1</li>
-                                                                          <li>Produto 2</li>
-                                                                                <li>Produto 3</li>
-                                                                                      <!-- Adicione mais produtos aqui -->
-                                                                                          </ul>
-                                                                                            </main>
-
-                                                                                              <script src="scripts.js"></script>
-                                                                                              </body>
-
-                                                                                              </html>
-                                                                                              
+                                                      </html>
+                                                      
