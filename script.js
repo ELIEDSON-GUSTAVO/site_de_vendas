@@ -1,45 +1,61 @@
-// Função para exibir a seção selecionada e esconder as outras
-function showSection(sectionId) {
-  // Esconder todas as seções
-    var sections = document.getElementsByTagName('section');
-      for (var i = 0; i < sections.length; i++) {
-          sections[i].style.display = 'none';
-            }
+// Selecionar elementos
+const btnProdutos = document.getElementById('btn-produtos');
+const btnContato = document.getElementById('btn-contato');
+const btnGmail = document.getElementById('btn-gmail');
+const btnVoltarProduto = document.getElementById('btn-voltar-produto');
+const btnVoltarContato = document.getElementById('btn-voltar-contato');
+const btnVoltarGmail = document.getElementById('btn-voltar-gmail');
+const produtosPage = document.getElementById('produtos');
+const contatoPage = document.getElementById('contato');
+const gmailPage = document.getElementById('gmail');
+const descricaoProdutoPage = document.getElementById('descricao-produto');
+const btnComprarProduto = document.getElementById('btn-comprar-produto');
 
-              // Exibir a seção selecionada
-                var sectionToShow = document.getElementById(sectionId);
-                  if (sectionToShow) {
-                      sectionToShow.style.display = 'block';
-                        }
-                        }
+// Mostrar página de produtos
+btnProdutos.addEventListener('click', () => {
+  produtosPage.classList.add('show');
+    contatoPage.classList.remove('show');
+      gmailPage.classList.remove('show');
+        descricaoProdutoPage.classList.remove('show');
+        });
 
-                        // Função para preencher o valor do produto na página de compra
-                        function fillProductValue(productName, productValue) {
-                          var productValueElement = document.getElementById('product-value');
-                            if (productValueElement) {
-                                productValueElement.textContent = 'Valor: R$ ' + productValue.toFixed(2);
-                                  }
-                                  }
+        // Mostrar página de contato
+        btnContato.addEventListener('click', () => {
+          produtosPage.classList.remove('show');
+            contatoPage.classList.add('show');
+              gmailPage.classList.remove('show');
+                descricaoProdutoPage.classList.remove('show');
+                });
 
-                                  // Função para exibir o formulário de preenchimento de dados para compra
-                                  function showPaymentForm() {
-                                    // Obter o valor do produto selecionado
-                                      var productName = document.getElementById('product-name').textContent;
-                                        var productValue = parseFloat(document.getElementById('product-value').textContent.split(' ')[1]);
+                // Mostrar página do Gmail
+                btnGmail.addEventListener('click', () => {
+                  produtosPage.classList.remove('show');
+                    contatoPage.classList.remove('show');
+                      gmailPage.classList.add('show');
+                        descricaoProdutoPage.classList.remove('show');
+                        });
 
-                                          // Preencher o valor do produto na página de compra
-                                            fillProductValue(productName, productValue);
+                        // Voltar para a página de produtos a partir da página de descrição do produto
+                        btnVoltarProduto.addEventListener('click', () => {
+                          produtosPage.classList.add('show');
+                            descricaoProdutoPage.classList.remove('show');
+                            });
 
-                                              // Esconder a seção de produtos
-                                                var produtosSection = document.getElementById('produtos');
-                                                  if (produtosSection) {
-                                                      produtosSection.style.display = 'none';
-                                                        }
+                            // Voltar para a página de contato a partir da página de formulário do Gmail
+                            btnVoltarContato.addEventListener('click', () => {
+                              contatoPage.classList.add('show');
+                                gmailPage.classList.remove('show');
+                                });
 
-                                                          // Exibir a seção de pagamento
-                                                            var paymentSection = document.getElementById('payment-page');
-                                                              if (paymentSection) {
-                                                                  paymentSection.style.display = 'block';
-                                                                    }
-                                                                    }
-                                                                    
+                                // Voltar para a página de produtos a partir da página de formulário do Gmail
+                                btnVoltarGmail.addEventListener('click', () => {
+                                  produtosPage.classList.add('show');
+                                    gmailPage.classList.remove('show');
+                                    });
+
+                                    // Mostrar a página de descrição do produto quando o botão "Comprar" for clicado
+                                    btnComprarProduto.addEventListener('click', () => {
+                                      produtosPage.classList.remove('show');
+                                        descricaoProdutoPage.classList.add('show');
+                                        });
+                                        
