@@ -1,4 +1,4 @@
-// Transição de páginas suave
+// Script para transição suave de páginas
 function smoothScroll(target, duration) {
   var target = document.querySelector(target);
     var targetPosition = target.getBoundingClientRect().top;
@@ -24,8 +24,17 @@ function smoothScroll(target, duration) {
                                                         requestAnimationFrame(animation);
                                                         }
 
-                                                        var btnScroll = document.querySelector('.btn-scroll');
-                                                        btnScroll.addEventListener('click', function() {
-                                                          smoothScroll('#produtos', 1000);
+                                                        var btnScroll = document.querySelector(".btn-scroll");
+                                                        btnScroll.addEventListener("click", function () {
+                                                          smoothScroll("#produtos", 1000);
                                                           });
-                                                          
+
+                                                          var categoriaLinks = document.querySelectorAll(".categoria-list a");
+                                                          categoriaLinks.forEach(function (link) {
+                                                            link.addEventListener("click", function (e) {
+                                                                e.preventDefault();
+                                                                    var target = e.target.getAttribute("href");
+                                                                        smoothScroll(target, 1000);
+                                                                          });
+                                                                          });
+                                                                          
