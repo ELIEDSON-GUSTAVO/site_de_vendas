@@ -58,225 +58,208 @@
                                                             z-index: -1;
                                                             }
 
-                                                            .banner-content {
-                                                              text-align: center;
-                                                              }
+                                                            #banner h1 {
+                                                              font-size: 48px;
+                                                                text-transform: uppercase;
+                                                                  letter-spacing: 3px;
+                                                                    margin-bottom: 20px;
+                                                                      color: #ff9000; /* Laranja */
+                                                                      }
 
-                                                              .fade-in {
-                                                                animation: fadeIn 1s ease forwards;
-                                                                  opacity: 0;
-                                                                  }
+                                                                      #banner p {
+                                                                        font-size: 18px;
+                                                                        }
 
-                                                                  @keyframes fadeIn {
-                                                                    to {
-                                                                        opacity: 1;
-                                                                          }
-                                                                          }
+                                                                        .btn-scroll {
+                                                                          display: inline-block;
+                                                                            margin-top: 20px;
+                                                                              padding: 10px 20px;
+                                                                                background-color: #ff9000; /* Laranja */
+                                                                                  color: #fff; /* Branco */
+                                                                                    text-decoration: none;
+                                                                                      font-size: 18px;
+                                                                                        border-radius: 4px;
+                                                                                        }
 
-                                                                          .btn-scroll {
-                                                                            display: inline-block;
-                                                                              margin-top: 20px;
-                                                                                padding: 10px 20px;
-                                                                                  background-color: #ff9000; /* Laranja */
-                                                                                    color: #fff; /* Branco */
-                                                                                      text-decoration: none;
-                                                                                        font-size: 18px;
-                                                                                          border-radius: 4px;
-                                                                                          }
+                                                                                        /* Estilos da lista de produtos */
+                                                                                        #produtos {
+                                                                                          padding: 50px 0;
+                                                                                            background-color: #fff; /* Branco */
+                                                                                            }
 
-                                                                                          /* Estilos da lista de produtos */
-                                                                                          #produtos {
-                                                                                            padding: 50px 0;
-                                                                                              background-color: #fff; /* Branco */
-                                                                                              }
+                                                                                            .product-list {
+                                                                                              display: flex;
+                                                                                                justify-content: space-around;
+                                                                                                  flex-wrap: wrap;
+                                                                                                  }
 
-                                                                                              .categoria-list {
-                                                                                                display: flex;
-                                                                                                  justify-content: center;
-                                                                                                    list-style: none;
-                                                                                                      margin-bottom: 20px;
-                                                                                                      }
-
-                                                                                                      .categoria-list li {
-                                                                                                        margin: 0 10px;
+                                                                                                  .product-item {
+                                                                                                    text-align: center;
+                                                                                                      margin: 20px;
+                                                                                                        max-width: 300px;
                                                                                                         }
 
-                                                                                                        .categoria-list li a {
-                                                                                                          text-decoration: none;
-                                                                                                            color: #7d3a89; /* Roxo */
-                                                                                                            }
+                                                                                                        .product-item img {
+                                                                                                          width: 100%;
+                                                                                                            border: 3px solid #ff9000; /* Laranja */
+                                                                                                              border-radius: 10px;
+                                                                                                              }
 
-                                                                                                            .product-list {
-                                                                                                              display: flex;
-                                                                                                                justify-content: space-around;
-                                                                                                                  flex-wrap: wrap;
-                                                                                                                  }
+                                                                                                              .product-item h3 {
+                                                                                                                margin-top: 10px;
+                                                                                                                  font-size: 24px;
+                                                                                                                    color: #7d3a89; /* Roxo */
+                                                                                                                    }
 
-                                                                                                                  .product-item {
-                                                                                                                    text-align: center;
-                                                                                                                      margin: 20px;
-                                                                                                                        max-width: 300px;
-                                                                                                                          position: relative;
-                                                                                                                          }
+                                                                                                                    .product-item p {
+                                                                                                                      margin-top: 10px;
+                                                                                                                        color: #444;
+                                                                                                                        }
 
-                                                                                                                          .product-item img {
-                                                                                                                            width: 100%;
-                                                                                                                              border: 3px solid #ff9000; /* Laranja */
-                                                                                                                                border-radius: 10px;
-                                                                                                                                }
-
-                                                                                                                                .product-item h3 {
-                                                                                                                                  margin-top: 10px;
-                                                                                                                                    font-size: 24px;
-                                                                                                                                      color: #7d3a89; /* Roxo */
+                                                                                                                        .discount {
+                                                                                                                          background-color: #ff9000; /* Laranja */
+                                                                                                                            color: #fff; /* Branco */
+                                                                                                                              padding: 5px 10px;
+                                                                                                                                position: absolute;
+                                                                                                                                  top: 10px;
+                                                                                                                                    left: 10px;
+                                                                                                                                      border-radius: 4px;
                                                                                                                                       }
 
-                                                                                                                                      .product-item p {
-                                                                                                                                        margin-top: 10px;
-                                                                                                                                          color: #444;
+                                                                                                                                      .product-price {
+                                                                                                                                        margin-top: 5px;
+                                                                                                                                          font-size: 18px;
                                                                                                                                           }
 
-                                                                                                                                          .discount {
-                                                                                                                                            background-color: #ff9000; /* Laranja */
-                                                                                                                                              color: #fff; /* Branco */
-                                                                                                                                                padding: 5px 10px;
-                                                                                                                                                  position: absolute;
-                                                                                                                                                    top: 10px;
-                                                                                                                                                      left: 10px;
-                                                                                                                                                        border-radius: 4px;
-                                                                                                                                                        }
+                                                                                                                                          .btn-cart {
+                                                                                                                                            display: block;
+                                                                                                                                              margin-top: 10px;
+                                                                                                                                                padding: 8px 16px;
+                                                                                                                                                  background-color: #ff9000; /* Laranja */
+                                                                                                                                                    color: #fff; /* Branco */
+                                                                                                                                                      border: none;
+                                                                                                                                                        cursor: pointer;
+                                                                                                                                                          font-size: 16px;
+                                                                                                                                                            border-radius: 4px;
+                                                                                                                                                              transition: background-color 0.3s ease;
+                                                                                                                                                              }
 
-                                                                                                                                                        .product-price {
-                                                                                                                                                          margin-top: 5px;
-                                                                                                                                                            font-size: 18px;
-                                                                                                                                                            }
+                                                                                                                                                              .btn-cart:hover {
+                                                                                                                                                                background-color: #ff7b00; /* Laranja mais escuro */
+                                                                                                                                                                }
 
-                                                                                                                                                            .btn-cart {
-                                                                                                                                                              display: block;
-                                                                                                                                                                margin-top: 10px;
-                                                                                                                                                                  padding: 8px 16px;
-                                                                                                                                                                    background-color: #ff9000; /* Laranja */
-                                                                                                                                                                      color: #fff; /* Branco */
-                                                                                                                                                                        border: none;
-                                                                                                                                                                          cursor: pointer;
-                                                                                                                                                                            font-size: 16px;
-                                                                                                                                                                              border-radius: 4px;
-                                                                                                                                                                                transition: background-color 0.3s ease;
-                                                                                                                                                                                }
+                                                                                                                                                                /* Estilos da página de descrição do produto */
+                                                                                                                                                                #descricao-produto1 {
+                                                                                                                                                                  display: flex;
+                                                                                                                                                                    justify-content: center;
+                                                                                                                                                                      align-items: center;
+                                                                                                                                                                        height: 100vh;
+                                                                                                                                                                          flex-direction: column;
+                                                                                                                                                                          }
 
-                                                                                                                                                                                .btn-cart:hover {
-                                                                                                                                                                                  background-color: #ff7b00; /* Laranja mais escuro */
-                                                                                                                                                                                  }
+                                                                                                                                                                          .product-details {
+                                                                                                                                                                            text-align: center;
+                                                                                                                                                                              max-width: 500px;
+                                                                                                                                                                              }
 
-                                                                                                                                                                                  /* Estilos da página de descrição do produto */
-                                                                                                                                                                                  #descricao-produto1 {
-                                                                                                                                                                                    display: flex;
-                                                                                                                                                                                      justify-content: center;
-                                                                                                                                                                                        align-items: center;
-                                                                                                                                                                                          height: 100vh;
-                                                                                                                                                                                            flex-direction: column;
-                                                                                                                                                                                            }
+                                                                                                                                                                              .product-details img {
+                                                                                                                                                                                width: 100%;
+                                                                                                                                                                                  border: 3px solid #ff9000; /* Laranja */
+                                                                                                                                                                                    border-radius: 10px;
+                                                                                                                                                                                    }
 
-                                                                                                                                                                                            .product-details {
-                                                                                                                                                                                              text-align: center;
-                                                                                                                                                                                                max-width: 500px;
+                                                                                                                                                                                    .product-details h3 {
+                                                                                                                                                                                      margin-top: 20px;
+                                                                                                                                                                                        font-size: 32px;
+                                                                                                                                                                                          color: #7d3a89; /* Roxo */
+                                                                                                                                                                                          }
+
+                                                                                                                                                                                          .product-details p {
+                                                                                                                                                                                            margin-top: 10px;
+                                                                                                                                                                                              color: #444;
+                                                                                                                                                                                              }
+
+                                                                                                                                                                                              .endereco-form {
+                                                                                                                                                                                                margin-top: 20px;
                                                                                                                                                                                                 }
 
-                                                                                                                                                                                                .product-details img {
-                                                                                                                                                                                                  width: 100%;
-                                                                                                                                                                                                    border: 3px solid #ff9000; /* Laranja */
-                                                                                                                                                                                                      border-radius: 10px;
-                                                                                                                                                                                                      }
+                                                                                                                                                                                                .endereco-form h4 {
+                                                                                                                                                                                                  font-size: 24px;
+                                                                                                                                                                                                    color: #7d3a89; /* Roxo */
+                                                                                                                                                                                                    }
 
-                                                                                                                                                                                                      .product-details h3 {
-                                                                                                                                                                                                        margin-top: 20px;
-                                                                                                                                                                                                          font-size: 32px;
-                                                                                                                                                                                                            color: #7d3a89; /* Roxo */
-                                                                                                                                                                                                            }
+                                                                                                                                                                                                    .endereco-form form {
+                                                                                                                                                                                                      display: flex;
+                                                                                                                                                                                                        flex-direction: column;
+                                                                                                                                                                                                          margin-top: 10px;
+                                                                                                                                                                                                          }
 
-                                                                                                                                                                                                            .product-details p {
-                                                                                                                                                                                                              margin-top: 10px;
-                                                                                                                                                                                                                color: #444;
-                                                                                                                                                                                                                }
-
-                                                                                                                                                                                                                .endereco-form {
-                                                                                                                                                                                                                  margin-top: 20px;
+                                                                                                                                                                                                          .endereco-form form input {
+                                                                                                                                                                                                            margin-bottom: 10px;
+                                                                                                                                                                                                              padding: 8px;
+                                                                                                                                                                                                                border: 1px solid #ccc;
+                                                                                                                                                                                                                  border-radius: 4px;
                                                                                                                                                                                                                   }
 
-                                                                                                                                                                                                                  .endereco-form h4 {
-                                                                                                                                                                                                                    font-size: 24px;
-                                                                                                                                                                                                                      color: #7d3a89; /* Roxo */
-                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                  .endereco-form form button {
+                                                                                                                                                                                                                    padding: 8px 16px;
+                                                                                                                                                                                                                      background-color: #ff9000; /* Laranja */
+                                                                                                                                                                                                                        color: #fff; /* Branco */
+                                                                                                                                                                                                                          border: none;
+                                                                                                                                                                                                                            cursor: pointer;
+                                                                                                                                                                                                                              font-size: 16px;
+                                                                                                                                                                                                                                border-radius: 4px;
+                                                                                                                                                                                                                                  transition: background-color 0.3s ease;
+                                                                                                                                                                                                                                  }
 
-                                                                                                                                                                                                                      .endereco-form form {
-                                                                                                                                                                                                                        display: flex;
-                                                                                                                                                                                                                          flex-direction: column;
-                                                                                                                                                                                                                            margin-top: 10px;
-                                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                                            .endereco-form form input {
-                                                                                                                                                                                                                              margin-bottom: 10px;
-                                                                                                                                                                                                                                padding: 8px;
-                                                                                                                                                                                                                                  border: 1px solid #ccc;
-                                                                                                                                                                                                                                    border-radius: 4px;
+                                                                                                                                                                                                                                  .endereco-form form button:hover {
+                                                                                                                                                                                                                                    background-color: #ff7b00; /* Laranja mais escuro */
                                                                                                                                                                                                                                     }
 
-                                                                                                                                                                                                                                    .endereco-form form button {
-                                                                                                                                                                                                                                      padding: 8px 16px;
-                                                                                                                                                                                                                                        background-color: #ff9000; /* Laranja */
-                                                                                                                                                                                                                                          color: #fff; /* Branco */
-                                                                                                                                                                                                                                            border: none;
-                                                                                                                                                                                                                                              cursor: pointer;
-                                                                                                                                                                                                                                                font-size: 16px;
-                                                                                                                                                                                                                                                  border-radius: 4px;
-                                                                                                                                                                                                                                                    transition: background-color 0.3s ease;
-                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                    .btn-back {
+                                                                                                                                                                                                                                      display: block;
+                                                                                                                                                                                                                                        margin-top: 20px;
+                                                                                                                                                                                                                                          padding: 8px 16px;
+                                                                                                                                                                                                                                            background-color: #7d3a89; /* Roxo */
+                                                                                                                                                                                                                                              color: #fff; /* Branco */
+                                                                                                                                                                                                                                                border: none;
+                                                                                                                                                                                                                                                  cursor: pointer;
+                                                                                                                                                                                                                                                    font-size: 16px;
+                                                                                                                                                                                                                                                      border-radius: 4px;
+                                                                                                                                                                                                                                                        transition: background-color 0.3s ease;
+                                                                                                                                                                                                                                                        }
 
-                                                                                                                                                                                                                                                    .endereco-form form button:hover {
-                                                                                                                                                                                                                                                      background-color: #ff7b00; /* Laranja mais escuro */
-                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                        .btn-back:hover {
+                                                                                                                                                                                                                                                          background-color: #692d76; /* Roxo mais escuro */
+                                                                                                                                                                                                                                                          }
 
-                                                                                                                                                                                                                                                      .btn-back {
-                                                                                                                                                                                                                                                        display: block;
-                                                                                                                                                                                                                                                          margin-top: 20px;
-                                                                                                                                                                                                                                                            padding: 8px 16px;
-                                                                                                                                                                                                                                                              background-color: #7d3a89; /* Roxo */
-                                                                                                                                                                                                                                                                color: #fff; /* Branco */
-                                                                                                                                                                                                                                                                  border: none;
-                                                                                                                                                                                                                                                                    cursor: pointer;
-                                                                                                                                                                                                                                                                      font-size: 16px;
-                                                                                                                                                                                                                                                                        border-radius: 4px;
-                                                                                                                                                                                                                                                                          transition: background-color 0.3s ease;
-                                                                                                                                                                                                                                                                          }
-
-                                                                                                                                                                                                                                                                          .btn-back:hover {
-                                                                                                                                                                                                                                                                            background-color: #692d76; /* Roxo mais escuro */
+                                                                                                                                                                                                                                                          /* Estilos do rodapé */
+                                                                                                                                                                                                                                                          footer {
+                                                                                                                                                                                                                                                            display: flex;
+                                                                                                                                                                                                                                                              justify-content: space-between;
+                                                                                                                                                                                                                                                                align-items: center;
+                                                                                                                                                                                                                                                                  padding: 20px;
+                                                                                                                                                                                                                                                                    background-color: #7d3a89; /* Roxo */
+                                                                                                                                                                                                                                                                      color: #fff; /* Branco */
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                          bottom: 0;
+                                                                                                                                                                                                                                                                            width: 100%;
                                                                                                                                                                                                                                                                             }
 
-                                                                                                                                                                                                                                                                            /* Estilos do rodapé */
-                                                                                                                                                                                                                                                                            footer {
-                                                                                                                                                                                                                                                                              display: flex;
-                                                                                                                                                                                                                                                                                justify-content: space-between;
+                                                                                                                                                                                                                                                                            .logo-footer img {
+                                                                                                                                                                                                                                                                              width: 80px;
+                                                                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                                                                              .social-links {
+                                                                                                                                                                                                                                                                                display: flex;
                                                                                                                                                                                                                                                                                   align-items: center;
-                                                                                                                                                                                                                                                                                    padding: 20px;
-                                                                                                                                                                                                                                                                                      background-color: #7d3a89; /* Roxo */
-                                                                                                                                                                                                                                                                                        color: #fff; /* Branco */
-                                                                                                                                                                                                                                                                                          position: absolute;
-                                                                                                                                                                                                                                                                                            bottom: 0;
-                                                                                                                                                                                                                                                                                              width: 100%;
-                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                  }
 
-                                                                                                                                                                                                                                                                                              .logo-footer img {
-                                                                                                                                                                                                                                                                                                width: 80px;
-                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                  .social-links a {
+                                                                                                                                                                                                                                                                                    margin-left: 10px;
+                                                                                                                                                                                                                                                                                    }
 
-                                                                                                                                                                                                                                                                                                .social-links a {
-                                                                                                                                                                                                                                                                                                  margin-left: 10px;
-                                                                                                                                                                                                                                                                                                  }
-
-                                                                                                                                                                                                                                                                                                  .contact p {
-                                                                                                                                                                                                                                                                                                    font-size: 18px;
-                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                    /* ... (restante do CSS) ... */
-                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                    .contact p {
+                                                                                                                                                                                                                                                                                      font-size: 18px;
+                                                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                                                      
