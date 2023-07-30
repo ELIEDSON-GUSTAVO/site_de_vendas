@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
-        <title>UNITÉ</title>
+        <title>UNITÉ - Loja de Produtos</title>
         </head>
+
         <body>
           <header>
               <div class="logo">
-                    <img src="img/1690683682677.png" alt="UNITÉ Logo">
+                    <img src="logo.png" alt="Logo da UNITÉ">
                         </div>
                             <nav>
-                                  <ul class="categoria-list">
-                                          <li><a href="#banner">Início</a></li>
-                                                  <li><a href="./produtos.html produtos">Produtos</a></li>
-                                                          <li><a href="./contato.html contato">Contato</a></li>
+                                  <ul>
+                                          <li><a href="#" onclick="showSection('banner')">Início</a></li>
+                                                  <li><a href="#" onclick="showSection('produtos')">Produtos</a></li>
+                                                          <li><a href="#" onclick="showSection('contato')">Contato</a></li>
+                                                                  <li><a href="#" onclick="showSection('payment-page')">Comprar</a></li>
                                                                         </ul>
                                                                             </nav>
                                                                               </header>
 
-                                                                                <div id="banner">
-                                                                                    <video autoplay muted loop>
-                                                                                          <source src="video/banner-video.mp4" type="video/mp4">
-                                                                                              </video>
-                                                                                                  <div class="banner-content">
-                                                                                                        <h1>UNITÉ</h1>
-                                                                                                              <p>Seja bem-vindo à nossa loja online!</p>
-                                                                                                                    <a href="#" class="btn-scroll">Ver mais</a>
-                                                                                                                        </div>
-                                                                                                                          </div>
+                                                                                <section id="banner">
+                                                                                    <!-- Seu código do banner aqui -->
+                                                                                      </section>
 
-                                                                                                                            <section id="produtos">
-                                                                                                                                <h2>Produtos</h2>
-                                                                                                                                    <ul class="product-list">
-                                                                                                                                          <li class="product-item">
-                                                                                                                                                  <img src="img/product1.jpg" alt="Produto 1">
-                                                                                                                                                          <h3>Produto 1</h3>
-                                                                                                                                                                  <p class="product-price">$50.00</p>
-                                                                                                                                                                          <button class="btn-cart">Comprar</button>
-                                                                                                                                                                                </li>
-                                                                                                                                                                                      <!-- Adicione mais produtos aqui -->
-                                                                                                                                                                                          </ul>
-                                                                                                                                                                                            </section>
+                                                                                        <section id="produtos" style="display: none;">
+                                                                                            <div class="product-list">
+                                                                                                  <div class="product-item">
+                                                                                                          <img src="produto1.jpg" alt="Produto 1">
+                                                                                                                  <h3 id="product-name">Produto 1</h3>
+                                                                                                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                                                                                  <div class="discount">20% OFF</div>
+                                                                                                                                          <p class="product-price">R$ 50,00</p>
+                                                                                                                                                  <button class="btn-cart" onclick="showPaymentForm()">Comprar</button>
+                                                                                                                                                        </div>
+                                                                                                                                                              <!-- Adicione mais produtos aqui com a mesma estrutura -->
+                                                                                                                                                                  </div>
+                                                                                                                                                                    </section>
 
-                                                                                                                                                                                              <section id="descricao-produto1" class="product-details">
-                                                                                                                                                                                                  <div class="product-details-content">
-                                                                                                                                                                                                        <img src="img/product1.jpg" alt="Produto 1">
-                                                                                                                                                                                                              <h3>Produto 1</h3>
-                                                                                                                                                                                                                    <p>Descrição do produto 1...</p>
-                                                                                                                                                                                                                          <button class="btn-back">Voltar</button>
-                                                                                                                                                                                                                                <button class="btn-cart">Comprar</button>
-                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                      </section>
+                                                                                                                                                                      <section id="contato" style="display: none;">
+                                                                                                                                                                          <h2>Entre em contato conosco</h2>
+                                                                                                                                                                              <!-- Seu código do formulário de contato aqui -->
+                                                                                                                                                                                </section>
 
-                                                                                                                                                                                                                                        <footer>
-                                                                                                                                                                                                                                            <div class="logo-footer">
-                                                                                                                                                                                                                                                  <img src="img/logo.png" alt="UNITÉ Logo">
+                                                                                                                                                                                  <section id="payment-page" style="display: none;">
+                                                                                                                                                                                      <div id="descricao-produto">
+                                                                                                                                                                                            <div class="product-details">
+                                                                                                                                                                                                    <img src="produto1.jpg" alt="Produto 1">
+                                                                                                                                                                                                            <h3 id="product-name">Produto 1</h3>
+                                                                                                                                                                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                                                                                                                                                                            <div class="discount">20% OFF</div>
+                                                                                                                                                                                                                                    <p id="product-value" class="product-price">Valor: R$ 50,00</p>
+                                                                                                                                                                                                                                            <button class="btn-cart" onclick="showPaymentForm()">Comprar</button>
+                                                                                                                                                                                                                                                  </div>
                                                                                                                                                                                                                                                       </div>
-                                                                                                                                                                                                                                                          <div class="social-links">
-                                                                                                                                                                                                                                                                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-                                                                                                                                                                                                                                                                      <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
-                                                                                                                                                                                                                                                                            <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
-                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                    <div class="contact">
-                                                                                                                                                                                                                                                                                          <p>Contato: contato@unite.com.br</p>
-                                                                                                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                                                                                                                </footer>
+                                                                                                                                                                                                                                                          <div class="endereco-form">
+                                                                                                                                                                                                                                                                <h4>Endereço de entrega</h4>
+                                                                                                                                                                                                                                                                      <form action="#" method="post">
+                                                                                                                                                                                                                                                                              <input type="text" name="nome" placeholder="Nome" required>
+                                                                                                                                                                                                                                                                                      <input type="text" name="endereco" placeholder="Endereço" required>
+                                                                                                                                                                                                                                                                                              <input type="text" name="cep" placeholder="CEP" required>
+                                                                                                                                                                                                                                                                                                      <button type="submit">Finalizar Compra</button>
+                                                                                                                                                                                                                                                                                                            </form>
+                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                    <button class="btn-back" onclick="showSection('produtos')">Voltar</button>
+                                                                                                                                                                                                                                                                                                                      </section>
 
-                                                                                                                                                                                                                                                                                                  <script src="script.js"></script>
-                                                                                                                                                                                                                                                                                                  </body>
-                                                                                                                                                                                                                                                                                                  </html>
-                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                        <footer>
+                                                                                                                                                                                                                                                                                                                            <div class="logo-footer">
+                                                                                                                                                                                                                                                                                                                                  <img src="logo.png" alt="Logo da UNITÉ">
+                                                                                                                                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                                                                                                          <div class="social-links">
+                                                                                                                                                                                                                                                                                                                                                <a href="#" class="btn-small">Facebook</a>
+                                                                                                                                                                                                                                                                                                                                                      <a href="#" class="btn-small">Instagram</a>
+                                                                                                                                                                                                                                                                                                                                                            <a href="#" class="btn-small">Twitter</a>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                    <div class="contact">
+                                                                                                                                                                                                                                                                                                                                                                          <p>Entre em contato: contato@unite.com</p>
+                                                                                                                                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                                                                                                                                                </footer>
+
+                                                                                                                                                                                                                                                                                                                                                                                  <script src="script.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                  </body>
+
+                                                                                                                                                                                                                                                                                                                                                                                  </html>
+                                                                                                                                                                                                                                                                                                                                                                                  

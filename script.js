@@ -1,41 +1,45 @@
-// JavaScript para fazer a transição de páginas
-const links = document.querySelectorAll('.categoria-list a');
-const sections = document.querySelectorAll('section');
+// Função para exibir a seção selecionada e esconder as outras
+function showSection(sectionId) {
+  // Esconder todas as seções
+    var sections = document.getElementsByTagName('section');
+      for (var i = 0; i < sections.length; i++) {
+          sections[i].style.display = 'none';
+            }
 
-links.forEach(link => {
-  link.addEventListener('click', e => {
-      e.preventDefault();
-          const target = e.target.getAttribute('href').substring(1);
-              sections.forEach(section => {
-                    section.classList.remove('show');
-                        });
-                            document.getElementById(target).classList.add('show');
-                              });
-                              });
+              // Exibir a seção selecionada
+                var sectionToShow = document.getElementById(sectionId);
+                  if (sectionToShow) {
+                      sectionToShow.style.display = 'block';
+                        }
+                        }
 
-                              // JavaScript para exibir a página de descrição do produto
-                              const productItems = document.querySelectorAll('.product-item');
-                              const productDetails = document.querySelectorAll('.product-details');
-                              const btnBack = document.querySelectorAll('.btn-back');
-                              const btnCart = document.querySelectorAll('.btn-cart');
+                        // Função para preencher o valor do produto na página de compra
+                        function fillProductValue(productName, productValue) {
+                          var productValueElement = document.getElementById('product-value');
+                            if (productValueElement) {
+                                productValueElement.textContent = 'Valor: R$ ' + productValue.toFixed(2);
+                                  }
+                                  }
 
-                              productItems.forEach((item, index) => {
-                                item.addEventListener('click', () => {
-                                    window.location.href = "product-details.html";
-                                      });
-                                      });
+                                  // Função para exibir o formulário de preenchimento de dados para compra
+                                  function showPaymentForm() {
+                                    // Obter o valor do produto selecionado
+                                      var productName = document.getElementById('product-name').textContent;
+                                        var productValue = parseFloat(document.getElementById('product-value').textContent.split(' ')[1]);
 
-                                      btnBack.forEach((btn, index) => {
-                                        btn.addEventListener('click', () => {
-                                            productDetails[index].classList.remove('show');
-                                                sections[1].classList.add('show');
-                                                  });
-                                                  });
+                                          // Preencher o valor do produto na página de compra
+                                            fillProductValue(productName, productValue);
 
-                                                  btnCart.forEach((btn, index) => {
-                                                    btn.addEventListener('click', () => {
-                                                        // Implemente o código para redirecionar para a página de pagamento com os dados do produto
-                                                            window.location.href = "payment-page.html";
-                                                              });
-                                                              });
-                                                              
+                                              // Esconder a seção de produtos
+                                                var produtosSection = document.getElementById('produtos');
+                                                  if (produtosSection) {
+                                                      produtosSection.style.display = 'none';
+                                                        }
+
+                                                          // Exibir a seção de pagamento
+                                                            var paymentSection = document.getElementById('payment-page');
+                                                              if (paymentSection) {
+                                                                  paymentSection.style.display = 'block';
+                                                                    }
+                                                                    }
+                                                                    
