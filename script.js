@@ -1,20 +1,31 @@
-const links = document.querySelectorAll(".fade-out-link");
+// Transição de páginas suave
+function smoothScroll(target, duration) {
+  var target = document.querySelector(target);
+    var targetPosition = target.getBoundingClientRect().top;
+      var startPosition = window.pageYOffset;
+        var distance = targetPosition - startPosition;
+          var startTime = null;
 
-links.forEach(link => {
-  link.addEventListener("click", function(event) {
-      event.preventDefault();
-          const href = link.getAttribute("href");
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                    var timeElapsed = currentTime - startTime;
+                        var run = ease(timeElapsed, startPosition, distance, duration);
+                            window.scrollTo(0, run);
+                                if (timeElapsed < duration) requestAnimationFrame(animation);
+                                  }
 
-              // Adicionando a classe "fade-out" para criar o efeito de fade-out
-                  document.body.classList.add("fade-out");
+                                    function ease(t, b, c, d) {
+                                        t /= d / 2;
+                                            if (t < 1) return c / 2 * t * t + b;
+                                                t--;
+                                                    return -c / 2 * (t * (t - 2) - 1) + b;
+                                                      }
 
-                      // Removendo a classe "fade-out" após um pequeno intervalo (tempo da animação)
-                          setTimeout(function() {
-                                window.location.href = href;
-                                    }, 500); // Tempo em milissegundos, ajuste conforme o tempo de animação
+                                                        requestAnimationFrame(animation);
+                                                        }
 
-                                        // Evitando o comportamento padrão do link
-                                            return false;
-                                              });
-                                              });
-                                              
+                                                        var btnScroll = document.querySelector('.btn-scroll');
+                                                        btnScroll.addEventListener('click', function() {
+                                                          smoothScroll('#produtos', 1000);
+                                                          });
+                                                          
