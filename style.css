@@ -1,72 +1,267 @@
-/* Estilos da lista de produtos */
-#produtos {
-  padding: 50px 0;
-    background-color: #fff; /* Branco */
-    }
+/* Reset CSS */
+* {
+  margin: 0;
+    padding: 0;
+      box-sizing: border-box;
+      }
 
-    .container {
-      max-width: 1200px;
-        margin: 0 auto;
+      body {
+        font-family: Arial, sans-serif;
         }
 
-        .product-list {
+        /* Estilos do header */
+        header {
           display: flex;
-            flex-wrap: wrap;
-              justify-content: space-between;
-              }
-
-              .product-item {
-                text-align: center;
-                  margin: 20px 0;
-                    flex-basis: calc(33.33% - 40px);
+            justify-content: space-between;
+              align-items: center;
+                padding: 20px;
+                  background-color: #7d3a89; /* Roxo */
+                    color: #fff; /* Branco */
                     }
 
-                    .product-item img {
-                      width: 100%;
-                        border: 3px solid #ff9000; /* Laranja */
-                          border-radius: 10px;
-                          }
+                    .logo img {
+                      width: 100px;
+                      }
 
-                          .product-item h3 {
-                            margin-top: 20px;
-                              font-size: 24px;
-                                color: #7d3a89; /* Roxo */
+                      nav ul {
+                        list-style: none;
+                        }
+
+                        nav ul li {
+                          display: inline-block;
+                            margin-left: 20px;
+                            }
+
+                            nav ul li a {
+                              text-decoration: none;
+                                color: #fff; /* Branco */
                                 }
 
-                                .product-item p {
-                                  margin-top: 10px;
-                                    color: #444;
-                                    }
-
-                                    .discount {
-                                      background-color: #ff9000; /* Laranja */
+                                /* Estilos do banner */
+                                #banner {
+                                  position: relative;
+                                    height: 500px;
+                                      background-color: #7d3a89; /* Roxo */
                                         color: #fff; /* Branco */
-                                          padding: 5px 10px;
-                                            position: absolute;
-                                              top: 10px;
-                                                left: 10px;
-                                                  border-radius: 4px;
-                                                  }
+                                          display: flex;
+                                            justify-content: center;
+                                              align-items: center;
+                                                flex-direction: column;
+                                                }
 
-                                                  .product-price {
-                                                    margin-top: 5px;
-                                                      font-size: 18px;
-                                                      }
+                                                #banner video {
+                                                  position: absolute;
+                                                    top: 0;
+                                                      left: 0;
+                                                        width: 100%;
+                                                          height: 100%;
+                                                            object-fit: cover;
+                                                              z-index: -1;
+                                                              }
 
-                                                      .btn-cart {
-                                                        display: block;
-                                                          margin-top: 10px;
-                                                            padding: 8px 16px;
-                                                              background-color: #ff9000; /* Laranja */
-                                                                color: #fff; /* Branco */
-                                                                  border: none;
-                                                                    cursor: pointer;
-                                                                      font-size: 16px;
-                                                                        border-radius: 4px;
-                                                                          transition: background-color 0.3s ease;
-                                                                          }
+                                                              #banner h1 {
+                                                                font-size: 72px;
+                                                                  text-transform: uppercase;
+                                                                    letter-spacing: 3px;
+                                                                      margin-bottom: 20px;
+                                                                        color: #ff9000; /* Laranja */
+                                                                        }
 
-                                                                          .btn-cart:hover {
-                                                                            background-color: #ff7b00; /* Laranja mais escuro */
+                                                                        #banner p {
+                                                                          font-size: 24px;
+                                                                            text-align: center;
                                                                             }
-                                                                            
+
+                                                                            .btn-scroll {
+                                                                              display: inline-block;
+                                                                                margin-top: 20px;
+                                                                                  padding: 10px 20px;
+                                                                                    background-color: #ff9000; /* Laranja */
+                                                                                      color: #fff; /* Branco */
+                                                                                        text-decoration: none;
+                                                                                          font-size: 18px;
+                                                                                            border-radius: 4px;
+                                                                                            }
+
+                                                                                            /* Estilos da lista de produtos */
+                                                                                            #produtos {
+                                                                                              padding: 50px 0;
+                                                                                                background-color: #fff; /* Branco */
+                                                                                                }
+
+                                                                                                .container {
+                                                                                                  max-width: 1200px;
+                                                                                                    margin: 0 auto;
+                                                                                                    }
+
+                                                                                                    .product-list {
+                                                                                                      display: flex;
+                                                                                                        flex-wrap: wrap;
+                                                                                                          justify-content: space-between;
+                                                                                                          }
+
+                                                                                                          .product-item {
+                                                                                                            text-align: center;
+                                                                                                              margin: 20px 0;
+                                                                                                                flex-basis: calc(33.33% - 40px);
+                                                                                                                }
+
+                                                                                                                .product-item img {
+                                                                                                                  width: 100%;
+                                                                                                                    border: 3px solid #ff9000; /* Laranja */
+                                                                                                                      border-radius: 10px;
+                                                                                                                      }
+
+                                                                                                                      .product-item h3 {
+                                                                                                                        margin-top: 20px;
+                                                                                                                          font-size: 24px;
+                                                                                                                            color: #7d3a89; /* Roxo */
+                                                                                                                            }
+
+                                                                                                                            .product-item p {
+                                                                                                                              margin-top: 10px;
+                                                                                                                                color: #444;
+                                                                                                                                }
+
+                                                                                                                                .discount {
+                                                                                                                                  background-color: #ff9000; /* Laranja */
+                                                                                                                                    color: #fff; /* Branco */
+                                                                                                                                      padding: 5px 10px;
+                                                                                                                                        position: absolute;
+                                                                                                                                          top: 10px;
+                                                                                                                                            left: 10px;
+                                                                                                                                              border-radius: 4px;
+                                                                                                                                              }
+
+                                                                                                                                              .product-price {
+                                                                                                                                                margin-top: 5px;
+                                                                                                                                                  font-size: 18px;
+                                                                                                                                                  }
+
+                                                                                                                                                  .btn-cart {
+                                                                                                                                                    display: block;
+                                                                                                                                                      margin-top: 10px;
+                                                                                                                                                        padding: 8px 16px;
+                                                                                                                                                          background-color: #ff9000; /* Laranja */
+                                                                                                                                                            color: #fff; /* Branco */
+                                                                                                                                                              border: none;
+                                                                                                                                                                cursor: pointer;
+                                                                                                                                                                  font-size: 16px;
+                                                                                                                                                                    border-radius: 4px;
+                                                                                                                                                                      transition: background-color 0.3s ease;
+                                                                                                                                                                      }
+
+                                                                                                                                                                      .btn-cart:hover {
+                                                                                                                                                                        background-color: #ff7b00; /* Laranja mais escuro */
+                                                                                                                                                                        }
+
+                                                                                                                                                                        /* Estilos da página de descrição do produto */
+                                                                                                                                                                        #descricao-produto {
+                                                                                                                                                                          display: flex;
+                                                                                                                                                                            justify-content: center;
+                                                                                                                                                                              align-items: center;
+                                                                                                                                                                                height: 100vh;
+                                                                                                                                                                                  flex-direction: column;
+                                                                                                                                                                                  }
+
+                                                                                                                                                                                  .product-details {
+                                                                                                                                                                                    text-align: center;
+                                                                                                                                                                                      max-width: 500px;
+                                                                                                                                                                                      }
+
+                                                                                                                                                                                      .product-details img {
+                                                                                                                                                                                        width: 100%;
+                                                                                                                                                                                          border: 3px solid #ff9000; /* Laranja */
+                                                                                                                                                                                            border-radius: 10px;
+                                                                                                                                                                                            }
+
+                                                                                                                                                                                            .product-details h3 {
+                                                                                                                                                                                              margin-top: 20px;
+                                                                                                                                                                                                font-size: 32px;
+                                                                                                                                                                                                  color: #7d3a89; /* Roxo */
+                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                  .product-details p {
+                                                                                                                                                                                                    margin-top: 10px;
+                                                                                                                                                                                                      color: #444;
+                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                      .endereco-form {
+                                                                                                                                                                                                        margin-top: 20px;
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                        .endereco-form h4 {
+                                                                                                                                                                                                          font-size: 24px;
+                                                                                                                                                                                                            color: #7d3a89; /* Roxo */
+                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                            .endereco-form form {
+                                                                                                                                                                                                              display: flex;
+                                                                                                                                                                                                                flex-direction: column;
+                                                                                                                                                                                                                  margin-top: 10px;
+                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                  .endereco-form form input {
+                                                                                                                                                                                                                    margin-bottom: 10px;
+                                                                                                                                                                                                                      padding: 8px;
+                                                                                                                                                                                                                        border: 1px solid #ccc;
+                                                                                                                                                                                                                          border-radius: 4px;
+                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                          .endereco-form form button {
+                                                                                                                                                                                                                            padding: 8px 16px;
+                                                                                                                                                                                                                              background-color: #ff9000; /* Laranja */
+                                                                                                                                                                                                                                color: #fff; /* Branco */
+                                                                                                                                                                                                                                  border: none;
+                                                                                                                                                                                                                                    cursor: pointer;
+                                                                                                                                                                                                                                      font-size: 16px;
+                                                                                                                                                                                                                                        border-radius: 4px;
+                                                                                                                                                                                                                                          transition: background-color 0.3s ease;
+                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                          .endereco-form form button:hover {
+                                                                                                                                                                                                                                            background-color: #ff7b00; /* Laranja mais escuro */
+                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                            .btn-back {
+                                                                                                                                                                                                                                              display: block;
+                                                                                                                                                                                                                                                margin-top: 20px;
+                                                                                                                                                                                                                                                  padding: 8px 16px;
+                                                                                                                                                                                                                                                    background-color: #7d3a89; /* Roxo */
+                                                                                                                                                                                                                                                      color: #fff; /* Branco */
+                                                                                                                                                                                                                                                        border: none;
+                                                                                                                                                                                                                                                          cursor: pointer;
+                                                                                                                                                                                                                                                            font-size: 16px;
+                                                                                                                                                                                                                                                              border-radius: 4px;
+                                                                                                                                                                                                                                                                transition: background-color 0.3s ease;
+                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                .btn-back:hover {
+                                                                                                                                                                                                                                                                  background-color: #692d76; /* Roxo mais escuro */
+                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                  /* Estilos do rodapé */
+                                                                                                                                                                                                                                                                  footer {
+                                                                                                                                                                                                                                                                    display: flex;
+                                                                                                                                                                                                                                                                      justify-content: space-between;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                          padding: 20px;
+                                                                                                                                                                                                                                                                            background-color: #7d3a89; /* Roxo */
+                                                                                                                                                                                                                                                                              color: #fff; /* Branco */
+                                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                                  bottom: 0;
+                                                                                                                                                                                                                                                                                    width: 100%;
+                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                    .logo-footer img {
+                                                                                                                                                                                                                                                                                      width: 80px;
+                                                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                                                      .social-links a {
+                                                                                                                                                                                                                                                                                        margin-left: 10px;
+                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                        .contact p {
+                                                                                                                                                                                                                                                                                          font-size: 18px;
+                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                          
